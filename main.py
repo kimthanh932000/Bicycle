@@ -53,8 +53,7 @@ mary.purchase_bike(felt)
 henry.purchase_bike(gazelle)
 print('')
 
-inventory = paw_shop.get_inventory()
-for x in inventory:
-    print(x.model)
-
+# inventory = paw_shop.get_inventory()
+# for x in inventory:
+#     print(x.model)
 
