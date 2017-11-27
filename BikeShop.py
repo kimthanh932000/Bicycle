@@ -5,24 +5,32 @@ class BikeShop:
     def __init__(self, name):
         self.name = name
 
-    def see_profit(self):
-        print('Profit: ' + self.__profit)
-
+    # add bike to inventory
     def add_to_inventory(self, bicycle):
         bicycle.price = bicycle.cost + bicycle.cost * 0.2
         self.__inventory.append(bicycle)
 
-    # def get_bicycle_price(self, bicycle):
-    #     return bicycle.cost * 0.2 + bicycle.cost
-
+    # get inventory
     def get_inventory(self):
         return self.__inventory
 
+    # update inventory
     def update_inventory(self, bike):
         for x in self.__inventory:
             if x.model == bike.model:
                 self.__inventory.remove(x)
+        self.update_profit(bike)
 
+    # update profit
+    def update_profit(self, bike):
+        BikeShop.__profit = BikeShop.__profit + (bike.price - bike.cost)
+
+    # print profit
+    def print_profit(self):
+        print('Profit: ' + str(self.__profit))
+
+    # print inventory
     def print_inventory(self):
+        print('List of bikes in inventory: ')
         for item in self.__inventory:
             print('Model: ' + str(item.model) + ', weight: ' + str(item.weight) + ', cost: ' + str(item.cost))

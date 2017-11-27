@@ -43,14 +43,23 @@ john.print_affordable_bike(inventory)
 print('')
 
 # the initial inventory of the bike shop
-print('List of bikes in inventory:')
 paw_shop.print_inventory()
 print('')
 
 # purchase bike
 john.purchase_bike(abici)
+paw_shop.print_inventory()
+paw_shop.print_profit()
+print('')
+
 mary.purchase_bike(felt)
+paw_shop.print_inventory()
+paw_shop.print_profit()
+print('')
+
 henry.purchase_bike(gazelle)
+paw_shop.print_inventory()
+paw_shop.print_profit()
 print('')
 
 # inventory = paw_shop.get_inventory()
