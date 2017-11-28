@@ -1,4 +1,4 @@
-from bicycle.BikeShop import BikeShop
+from bikeshop.BikeShop import BikeShop
 
 
 class Customer:
