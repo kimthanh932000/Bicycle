@@ -66,3 +66,4 @@ print('')
 # for x in inventory:
 #     print(x.model)
 
+# this is demo test asdasdasd
