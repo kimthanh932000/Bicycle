@@ -27,11 +27,10 @@ class BikeShop:
 
     # print profit
     def print_profit(self):
-        print('Profit: ' + str(self.__profit) + '\n')
+        print('Profit: ' + str(self.__profit))
 
     # print inventory
     def print_inventory(self):
-        # print('List of bikes in inventory: ')
         for item in self.__inventory:
             print('Model: ' + str(item.model) + '| Weight: ' + str(item.weight) + '| Cost: ' + str(item.cost))
         print('')

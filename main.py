@@ -52,27 +52,31 @@ inventory = paw_shop.get_inventory()
 # print list of affordable bicycles
 print('List of bicycles that customers can afford:')
 john.print_affordable_bike(inventory)
-print('')
+print('\n**********************************\n')
 
 # the initial inventory of the bike shop
 print('The initial inventory of the bike shop:')
 paw_shop.print_inventory()
+print('\n**********************************\n')
 
 # purchase bike
 john.purchase_bike(abici)
 print('The remaining bikes in inventory:')
 paw_shop.print_inventory()
 paw_shop.print_profit()
+print('\n**********************************\n')
 
 mary.purchase_bike(gazelle)
 print('The remaining bikes in inventory:')
 paw_shop.print_inventory()
 paw_shop.print_profit()
+print('\n**********************************\n')
 
 henry.purchase_bike(dahon)
 print('The remaining bikes in inventory:')
 paw_shop.print_inventory()
 paw_shop.print_profit()
+print('\n**********************************\n')
 
 # list of bikes that each customer owns
 print('Bicycles that each customer owns:')
