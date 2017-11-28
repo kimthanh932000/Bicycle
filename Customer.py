@@ -17,8 +17,7 @@ class Customer:
     def purchase_bike(self, bike):
         self.garage.append(bike)
         self.fund = self.fund - bike.price
-        print(str(self.name) + ' has purchased ' + str(bike.model) + ', cost ' + str(bike.price) + ', remaining fund is ' + str(self.fund))
-
+        print(str(self.name) + ' has purchased ' + str(bike.model) + ', cost ' + str(bike.price) + ', remaining fund is ' + str(self.fund) + '\n')
         # update inventory
         paw_shop = BikeShop('Paw')
         paw_shop.update_inventory(bike)
@@ -31,8 +30,15 @@ class Customer:
     # print bikes that customers can afford
     def print_affordable_bike(self, shop_inventory):
         for c in self.__lst_customer:
+            print(c.name + ' can buy ', end = '')
             for bike in shop_inventory:
                 if self.isAffordable(bike.price, c.fund):
-                    print(c.name + ' can buy ' + bike.model)
+                    print(bike.model, end = '| ')
+            print('')
 
+    def print_garage(self):
+        print(self.name + ' owns ', end = '')
+        for bike in self.garage:
+            print(bike.model, end = '|')
+        print('')
 

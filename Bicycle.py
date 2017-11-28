@@ -1,6 +1,8 @@
 class Bicycle:
-    def __init__(self, model, weight, cost):
+    def __init__(self, model, wheel, frame):
         self.model = model
-        self.weight = weight
-        self.cost = cost
+        self.weight = 2 * wheel.weight + frame.weight
+        self.cost = 2 * wheel.cost + frame.cost
+        self.wheel = wheel
+        self.frame = frame
 

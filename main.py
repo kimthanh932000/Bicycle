@@ -1,14 +1,26 @@
 from Bicycle import Bicycle
 from BikeShop import BikeShop
 from Customer import Customer
+from Frame import Frame
+from Wheel import Wheel
+
+# create 3 wheel types
+shimano_wheel = Wheel('Shimano', 10, 30, 'wooden')
+campagnolo_wheel = Wheel('Campagnolo', 5, 35, 'steel')
+zipp_wheel = Wheel('Zipp', 8, 48, 'carbon')
+
+# create 3 frames types
+aluminum_frame = Frame('aluminum', 20, 100)
+carbon_frame = Frame('carbon', 30, 400)
+steel_frame = Frame('steel', 45, 500)
 
 # create 6 bikes
-abici = Bicycle('Abici', 10, 150)
-bacchetta = Bicycle('Bacchetta', 5, 1000)
-dahon = Bicycle('Dahon', 8, 450)
-esmaltina = Bicycle('Esmaltina', 9, 500)
-felt = Bicycle('Felt', 12, 250)
-gazelle = Bicycle('Gazelle', 15, 300)
+abici = Bicycle('Abici', shimano_wheel, aluminum_frame)
+bacchetta = Bicycle('Bacchetta', campagnolo_wheel, carbon_frame)
+dahon = Bicycle('Dahon', zipp_wheel, steel_frame)
+esmaltina = Bicycle('Esmaltina', zipp_wheel, carbon_frame)
+felt = Bicycle('Felt', shimano_wheel, steel_frame )
+gazelle = Bicycle('Gazelle', campagnolo_wheel, aluminum_frame)
 
 # create a bike shop
 paw_shop = BikeShop('Paw')
@@ -43,22 +55,27 @@ john.print_affordable_bike(inventory)
 print('')
 
 # the initial inventory of the bike shop
+print('The initial inventory of the bike shop:')
 paw_shop.print_inventory()
-print('')
 
 # purchase bike
 john.purchase_bike(abici)
+print('The remaining bikes in inventory:')
 paw_shop.print_inventory()
 paw_shop.print_profit()
-print('')
 
-mary.purchase_bike(felt)
+mary.purchase_bike(gazelle)
+print('The remaining bikes in inventory:')
 paw_shop.print_inventory()
 paw_shop.print_profit()
-print('')
 
-henry.purchase_bike(gazelle)
+henry.purchase_bike(dahon)
+print('The remaining bikes in inventory:')
 paw_shop.print_inventory()
 paw_shop.print_profit()
-print('')
 
+# list of bikes that each customer owns
+print('Bicycles that each customer owns:')
+john.print_garage()
+mary.print_garage()
+henry.print_garage()
