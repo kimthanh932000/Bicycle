@@ -62,7 +62,3 @@ paw_shop.print_inventory()
 paw_shop.print_profit()
 print('')
 
-# inventory = paw_shop.get_inventory()
-# for x in inventory:
-#     print(x.model)
-# hello from me
