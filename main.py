@@ -1,8 +1,8 @@
-from Bicycle import Bicycle
-from BikeShop import BikeShop
-from Customer import Customer
-from Frame import Frame
-from Wheel import Wheel
+from bicycle.BikeShop import BikeShop
+from bicycle.Customer import Customer
+from bicycle.Wheel import Wheel
+from bicycle.Bicycle import Bicycle
+from bicycle.Frame import Frame
 
 # create 3 wheel types
 shimano_wheel = Wheel('Shimano', 10, 30, 'wooden')
