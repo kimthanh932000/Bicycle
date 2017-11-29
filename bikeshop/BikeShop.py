@@ -31,6 +31,11 @@ class BikeShop:
 
     # print inventory
     def print_inventory(self):
+        count = 0
         for item in self.__inventory:
-            print('Model: ' + str(item.model) + '| Weight: ' + str(item.weight) + '| Cost: ' + str(item.cost))
+            count+=1
+            print(str(count) + '. ' + 'Model: ' + str(item.model) +
+                  '| Weight: ' + str(item.weight) +
+                  '| Cost: ' + str(item.cost) +
+                  '| Manufacturer: ' + str(item.manufacturer.name))
         print('')

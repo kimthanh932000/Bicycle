@@ -1,10 +1,5 @@
 class Manufacturer:
-    def __init__(self, name, bike_models):
+    def __init__(self, name, percentage_over_cost):
         self.name = name
-        self.bike_produced = bike_models
+        self.percentage_over_cost = percentage_over_cost
 
-    def produce_bike(self, bike):
-        self.bike_produced.append(bike)
-
-    def sell_bike(self):
-        pass

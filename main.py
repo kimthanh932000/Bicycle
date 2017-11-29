@@ -3,6 +3,8 @@ from bicycle.Frame import Frame
 from bicycle.Wheel import Wheel
 from bikeshop.BikeShop import BikeShop
 from customer.Customer import Customer
+from manufacturer.ManuFacturer import Manufacturer
+
 
 # create 3 wheel types
 shimano_wheel = Wheel('Shimano', 10, 30, 'wooden')
@@ -10,17 +12,21 @@ campagnolo_wheel = Wheel('Campagnolo', 5, 35, 'steel')
 zipp_wheel = Wheel('Zipp', 8, 48, 'carbon')
 
 # create 3 frames types
-aluminum_frame = Frame('aluminum', 20, 100)
-carbon_frame = Frame('carbon', 30, 400)
-steel_frame = Frame('steel', 45, 500)
+aluminum_frame = Frame('aluminum', 20, 70)
+carbon_frame = Frame('carbon', 30, 300)
+steel_frame = Frame('steel', 45, 400)
+
+# create 2 manufacturers
+derby_cycle = Manufacturer('Derby Cycle', 0.05)
+cycleurope = Manufacturer('Cycleurope', 0.1)
 
 # create 6 bikes
-abici = Bicycle('Abici', shimano_wheel, aluminum_frame)
-bacchetta = Bicycle('Bacchetta', campagnolo_wheel, carbon_frame)
-dahon = Bicycle('Dahon', zipp_wheel, steel_frame)
-esmaltina = Bicycle('Esmaltina', zipp_wheel, carbon_frame)
-felt = Bicycle('Felt', shimano_wheel, steel_frame )
-gazelle = Bicycle('Gazelle', campagnolo_wheel, aluminum_frame)
+abici = Bicycle('Abici', shimano_wheel, aluminum_frame, derby_cycle)
+bacchetta = Bicycle('Bacchetta', campagnolo_wheel, carbon_frame, derby_cycle)
+dahon = Bicycle('Dahon', zipp_wheel, steel_frame, derby_cycle)
+esmaltina = Bicycle('Esmaltina', zipp_wheel, carbon_frame, cycleurope)
+felt = Bicycle('Felt', shimano_wheel, steel_frame, cycleurope)
+gazelle = Bicycle('Gazelle', campagnolo_wheel, aluminum_frame, cycleurope)
 
 # create a bike shop
 paw_shop = BikeShop('Paw')
@@ -45,9 +51,6 @@ henry.add_to_lst(henry)
 
 # get inventory
 inventory = paw_shop.get_inventory()
-
-# get customer list
-# customers = john.get_lst_customer()
 
 # print list of affordable bicycles
 print('List of bicycles that customers can afford:')
@@ -83,3 +86,4 @@ print('Bicycles that each customer owns:')
 john.print_garage()
 mary.print_garage()
 henry.print_garage()
+
