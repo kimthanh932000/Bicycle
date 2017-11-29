@@ -36,6 +36,7 @@ class Customer:
                     print(bike.model, end = '| ')
             print('')
 
+    # print bikes that customer owns
     def print_garage(self):
         print(self.name + ' owns ', end = '')
         for bike in self.garage:
